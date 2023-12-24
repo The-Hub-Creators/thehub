@@ -1,2 +1,17 @@
 /* src/pages/Home.css */
-/* Add any specific styles for the Home page */
+.home-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    color: #1e1e1e;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: #555;
+  }
+  

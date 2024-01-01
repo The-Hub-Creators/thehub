@@ -34,6 +34,7 @@ body {
     border-color: wheat;
     color: azure;
     cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
 .one {
@@ -47,4 +48,35 @@ body {
 .contact button:hover {
     background: wheat;
     color: black;
+}
+
+/* Media query */
+
+@media only screen and (max-width: 600px) {
+    .soon {
+        font-size: 60px;
+    }
+
+    .contact button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024) {
+    .soon {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .contact {
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+    .soon {
+        font-size: 90px;
+    }
 }

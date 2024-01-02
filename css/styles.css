@@ -1,11 +1,34 @@
 body {
-    background: black;
-    color: azure;
+    position: relative;
+    background-image: url('../images/111.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 15vh;
+
+    /* Remove filter from body */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/111.jpg'); /* Same background image as body */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+    z-index: -1;
 }
 
 .thehub,
@@ -15,6 +38,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+}
+
+.thehub {
+    font-size: 30px;
 }
 
 .soon {
@@ -30,9 +58,9 @@ body {
 .contact button {
     width: 200px;
     height: 50px;
-    background: black;
+    background: white;
     border-color: wheat;
-    color: azure;
+    color: black;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
 }
@@ -63,7 +91,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
     .soon {
         font-size: 70px;
     }
